@@ -1,0 +1,116 @@
+@font-face {    	
+    font-family: 'Shrikhand', cursive;
+    font-family: 'Roboto', sans-serif;
+}
+
+html{
+    width: 100%;
+}
+
+body {
+    margin : 0px;
+}
+
+#logo {
+    width: 100%;
+    font-family: 'Shrikhand';
+    margin: auto;
+    background-color: white;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 8px;
+}
+
+main{
+    width: 100%;
+    font-family: 'Roboto';
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #e9ebeb;
+    height: 50px;
+}
+.fa-map-marker-alt {
+    color: #2f302f;
+}
+
+.form {
+    background:  #e9ebeb;
+    border: 0px;
+    padding-left: 18px;
+    width: 125px;
+}
+
+.form:focus {
+    border: 0px;    
+}
+
+#intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #f5f7f7;
+    height: 287px;
+    margin: auto;
+    text-align: center;
+    padding-top: 45px;
+}
+
+.subtitle {
+    margin: 0px;
+}
+
+.subtitle__intro {
+    font-weight: 400;
+
+}
+
+.explore {
+    text-decoration: none;
+    color: white;
+    margin: auto;
+    margin-top: 0px;
+    margin-bottom: 57px;
+}
+
+.explore__button {
+    display: auto;
+    width: fit-content;
+    box-sizing: border-box;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 25px;
+    padding: 0px 20px;
+    background: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+}
+
+.fonctionnement__card {
+    display: flex;
+    align-items: center;
+    width: 86%;
+    height: 72px;
+    border-radius: 15px;
+    margin: auto;
+    margin-bottom: 25px;
+    box-shadow: 0px 2px 10px 0px #e4e6e6;
+    background-color: #f5f7f7;
+}
+
+.fonctionnement__card__number {
+    background-color: #9356DC;
+    color: white;
+    height: 24px;
+    width: 24px;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 24px;
+}
+
+
+.fonctionnement__card__info__icone {
+
+}
