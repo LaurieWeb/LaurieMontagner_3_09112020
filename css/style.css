@@ -33,6 +33,23 @@ footer {
   font-family: 'Roboto', sans-serif;
   src: url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 }
+.main__button {
+  display: auto;
+  width: fit-content;
+  box-sizing: border-box;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 25px;
+  padding: 0px 20px;
+  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+  box-shadow: 0px 2px 10px 0px #c5c7c6;
+  transition: all 250ms;
+}
+.main__button:hover {
+  background: linear-gradient(180deg, #ff88de 0%, #9b63df 100%);
+  box-shadow: 0px 2px 10px 0px #6f7070;
+}
+
 #logo {
   width: 100%;
   font-family: 'Shrikhand';
@@ -92,18 +109,6 @@ footer {
   margin: auto;
   margin-top: 0px;
   margin-bottom: 57px;
-}
-
-.explore__button {
-  display: auto;
-  width: fit-content;
-  box-sizing: border-box;
-  height: 50px;
-  line-height: 50px;
-  border-radius: 25px;
-  padding: 0px 20px;
-  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
-  box-shadow: 0px 2px 10px 0px #c5c7c6;
 }
 
 #fonctionnement {
@@ -188,14 +193,47 @@ footer {
   display: flex;
   justify-content: space-between;
   height: 77px;
+  margin-left: 14px;
+  margin-right: 24px;
 }
 
+.restaurant__card__info__text__title {
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin-top: 15px;
+}
+.restaurant__card__info__text__place {
+  margin-top: 0px;
+}
+
+.restaurant__card__info__heart {
+  display: block;
+  align-content: center;
+}
+.restaurant__card__info__heart__visible {
+  display: block;
+  position: relative;
+  top: 25px;
+  background-color: white;
+  opacity: 1;
+  transition: opacity 250ms;
+  z-index: 1;
+}
+.restaurant__card__info__heart__visible:hover {
+  opacity: 0;
+}
 .restaurant__card__info__heart__hidden {
   background: linear-gradient(55deg, #ff79da 0%, #9356dc 100%);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  position: relative;
+  top: 3px;
+}
+
+.heart-icon {
+  font-size: 21px;
 }
 
 #footerlogo {
@@ -216,6 +254,13 @@ footer {
   width: 11px;
   height: 13px;
   margin-right: 12px;
+}
+
+.fa-arrow-left {
+  font-size: 20px;
+  margin-top: 15px;
+  position: absolute;
+  margin-left: 23px;
 }
 
 /*# sourceMappingURL=style.css.map */

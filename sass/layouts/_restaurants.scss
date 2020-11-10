@@ -34,25 +34,39 @@
         &__info {
             display: flex;
             justify-content: space-between;
-            height: 77px;     
-            
+            height: 77px;
+            margin-left: 14px;  
+            margin-right: 24px;          
         }
     }
 }
 
 .restaurant__card__info__text {
     &__title {
-
+        font-weight: bold;
+        margin-bottom: 5px;
+        margin-top: 15px;
     }
     &__place {
-        
+        margin-top: 0px;        
     }
 }
 
 
-.restaurant__card__info__heart {   
+.restaurant__card__info__heart { 
+    display: block;
+    align-content: center;
     &__visible {                 
-        
+    display: block;
+    position: relative;
+    top: 25px;
+    background-color: white;
+    opacity: 1;
+    transition: opacity 250ms;
+    z-index: 1;
+        &:hover {
+            opacity: 0;
+        } 
     }          
     &__hidden {                 
         background: linear-gradient(55deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
@@ -60,5 +74,11 @@
         -moz-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color:transparent;
+        position: relative;
+        top: 3px;    
     }
+}
+
+.heart-icon {
+    font-size: 21px;
 }
