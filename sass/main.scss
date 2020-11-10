@@ -1,0 +1,22 @@
+@import "./utils/variables";
+@import "./base/base";
+@import "./base/typography";
+@import "./components/buttons";
+@import "./layouts/header";
+@import "./layouts/search";
+@import "./layouts/intro";
+@import "./layouts/fonctionnement";
+@import "./layouts/restaurants";
+@import "./layouts/footer";
+@import "./pages/menu";
+
+
+#logo {
+    width: 100%;
+    font-family: 'Shrikhand';
+    margin: auto;
+    background-color: white;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 8px;
+}

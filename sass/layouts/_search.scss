@@ -1,0 +1,23 @@
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #e9ebeb;
+    height: 50px;
+}
+.fa-map-marker-alt {
+    color: #2f302f;
+}
+
+.form {
+    background:  #e9ebeb;
+    border: 0px;
+    padding-left: 18px;
+    width: 125px;
+}
+
+.form:focus {
+    border: 0px;    
+}
