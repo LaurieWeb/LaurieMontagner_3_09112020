@@ -11,6 +11,20 @@ main {
   font-family: 'Roboto';
 }
 
+a {
+  text-decoration: none;
+  color: black;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+footer {
+  width: 100%;
+  background-color: #2f302f;
+  color: white;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
 @font-face {
   font-family: 'Shrikhand', cursive;
   src: url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
@@ -89,8 +103,18 @@ main {
   border-radius: 25px;
   padding: 0px 20px;
   background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+  box-shadow: 0px 2px 10px 0px #c5c7c6;
 }
 
+#fonctionnement {
+  margin-bottom: 68px;
+}
+
+.fonctionnement {
+  margin-top: 45px;
+  margin-left: 20px;
+  margin-bottom: 28px;
+}
 .fonctionnement__card {
   display: flex;
   align-items: center;
@@ -102,7 +126,6 @@ main {
   box-shadow: 0px 2px 10px 0px #e4e6e6;
   background-color: #f5f7f7;
 }
-
 .fonctionnement__card__number {
   background-color: #9356DC;
   color: white;
@@ -111,16 +134,88 @@ main {
   border-radius: 100%;
   text-align: center;
   line-height: 24px;
+  margin-left: -12px;
+}
+.fonctionnement__card__icone {
+  margin-left: 22px;
+  margin-right: 25px;
+}
+.fonctionnement__card__text {
+  font-weight: bold;
+  color: black !important;
+}
+.fonctionnement__card:hover {
+  color: #9356DC !important;
+  background-color: #f7ecff;
 }
 
-#logo {
+#restaurants {
   width: 100%;
-  font-family: 'Shrikhand';
+  background-color: #f5f7f7;
+  display: block;
+}
+
+.restaurant {
+  padding-top: 45px;
+  margin-top: 0px;
+  margin-left: 20px;
+  margin-bottom: 28px;
+}
+.restaurant__block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.restaurant__card {
+  display: block;
+  background-color: #FFFFFF;
+  border-radius: 11px;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.4);
+  width: 90%;
+  min-width: 246px;
   margin: auto;
-  background-color: white;
-  text-align: center;
-  margin-top: 10px;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+}
+.restaurant__card__img {
+  width: 100%;
+  object-fit: cover;
+  border-top-right-radius: 11px;
+  border-top-left-radius: 11px;
+  height: 174px;
+}
+.restaurant__card__info {
+  display: flex;
+  justify-content: space-between;
+  height: 77px;
+}
+
+.restaurant__card__info__heart__hidden {
+  background: linear-gradient(55deg, #ff79da 0%, #9356dc 100%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#footerlogo {
+  font-family: 'Shrikhand';
+  margin-left: 25px;
+}
+
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  margin-left: 25px;
+}
+.footer__list__link {
+  color: white !important;
   margin-bottom: 8px;
+}
+.footer__list__icone {
+  width: 11px;
+  height: 13px;
+  margin-right: 12px;
 }
 
 /*# sourceMappingURL=style.css.map */

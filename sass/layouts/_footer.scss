@@ -1,0 +1,19 @@
+#footerlogo {
+    font-family: 'Shrikhand';
+    margin-left: 25px;
+}
+
+.footer__list {
+    display: flex;
+    flex-direction: column;
+    margin-left: 25px;
+    &__link {
+        color: white!important;
+        margin-bottom: 8px;
+    }
+    &__icone {
+        width: 11px;
+        height: 13px;
+        margin-right: 12px;
+    }
+}
