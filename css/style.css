@@ -56,8 +56,9 @@ footer {
   margin: auto;
   background-color: white;
   text-align: center;
-  margin-top: 10px;
-  margin-bottom: 8px;
+  padding-top: 10px;
+  padding-bottom: 8px;
+  box-shadow: inset 0px -6px 9px -10px black;
 }
 
 .search {
@@ -116,9 +117,26 @@ footer {
 }
 
 .fonctionnement {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .fonctionnement {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+.fonctionnement__title {
   margin-top: 45px;
   margin-left: 20px;
   margin-bottom: 28px;
+}
+@media screen and (min-width: 768px) {
+  .fonctionnement__title {
+    text-align: center;
+    margin-left: 0px;
+  }
 }
 .fonctionnement__card {
   display: flex;
@@ -130,12 +148,17 @@ footer {
   margin-bottom: 25px;
   box-shadow: 0px 2px 10px 0px #e4e6e6;
   background-color: #f5f7f7;
+  transition: all 250ms;
+}
+@media screen and (min-width: 768px) {
+  .fonctionnement__card {
+    width: 25%;
+  }
 }
 .fonctionnement__card__number {
   background-color: #9356DC;
   color: white;
-  height: 24px;
-  width: 24px;
+  padding: 1px 8px;
   border-radius: 100%;
   text-align: center;
   line-height: 24px;
@@ -143,11 +166,12 @@ footer {
 }
 .fonctionnement__card__icone {
   margin-left: 22px;
-  margin-right: 25px;
+  margin-right: 20px;
 }
 .fonctionnement__card__text {
   font-weight: bold;
   color: black !important;
+  margin: 5px;
 }
 .fonctionnement__card:hover {
   color: #9356DC !important;
@@ -166,21 +190,54 @@ footer {
   margin-left: 20px;
   margin-bottom: 28px;
 }
+@media screen and (min-width: 768px) {
+  .restaurant {
+    text-align: center;
+    margin-left: 0px;
+  }
+}
 .restaurant__block {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+.restaurant__link {
+  width: 90%;
+}
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .restaurant__link {
+    width: 45%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .restaurant__link {
+    width: 20%;
+  }
 }
 .restaurant__card {
   display: block;
+  position: relative;
   background-color: #FFFFFF;
   border-radius: 11px;
   box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.4);
-  width: 90%;
+  width: 100%;
   min-width: 246px;
   margin: auto;
   margin-bottom: 30px;
   box-sizing: border-box;
+}
+.restaurant__card__new {
+  position: absolute;
+  background-color: #69e8d1;
+  color: #008b61;
+  width: 81px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 2px;
+  top: 13px;
+  font-size: 13px;
+  right: 13px;
 }
 .restaurant__card__img {
   width: 100%;
@@ -240,11 +297,23 @@ footer {
   font-family: 'Shrikhand';
   margin-left: 25px;
 }
+@media screen and (min-width: 768px) {
+  #footerlogo {
+    text-align: center;
+    margin-left: 0px;
+  }
+}
 
 .footer__list {
   display: flex;
   flex-direction: column;
   margin-left: 25px;
+}
+@media screen and (min-width: 768px) {
+  .footer__list {
+    text-align: center;
+    margin-left: 0px;
+  }
 }
 .footer__list__link {
   color: white !important;
@@ -261,6 +330,73 @@ footer {
   margin-top: 15px;
   position: absolute;
   margin-left: 23px;
+}
+
+.image__img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  margin-bottom: -35px;
+}
+
+#menu__title {
+  width: 100%;
+  background-color: #f5f7f7;
+  display: block;
+  position: absolute;
+  border-top-left-radius: 35px;
+  border-top-right-radius: 35px;
+}
+
+.menu__title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 90%;
+  margin: auto;
+}
+.menu__title__text {
+  font-family: 'Shrikhand';
+}
+.menu__title__heart {
+  background-color: #f5f7f7;
+}
+
+#dishes {
+  padding-top: 90px;
+  background-color: #f5f7f7;
+  padding-bottom: 90px;
+}
+
+.dishes__title {
+  font-weight: normal;
+  margin-left: 20px;
+}
+.dishes__title::after {
+  content: "";
+  width: 40px;
+  display: block;
+  height: 3px;
+  background-color: #99e2d0;
+  bottom: -5px;
+}
+.dishes__block__card {
+  display: block;
+  background-color: white;
+  border-radius: 12px;
+  height: 68px;
+  width: 90%;
+  margin: auto;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+  padding: 15px 10px;
+}
+.dishes__block__card__title {
+  margin: 0px;
+}
+.dishes__block__card__description {
+  margin: 0px;
+  font-size: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */

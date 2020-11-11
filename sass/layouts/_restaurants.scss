@@ -9,21 +9,45 @@
     margin-top: 0px;
     margin-left: 20px;
     margin-bottom: 28px;
+    @media screen and (min-width: 768px) {
+        text-align: center; 
+        margin-left: 0px;}
     &__block {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;	
+        justify-content: space-around;
+    }
+    &__link {
+        width: 90%;
+        @media screen and (min-width: 768px) and (max-width: 1439px) {
+            width: 45%;}
+            @media screen and (min-width: 1440px) {
+                width: 20%;}
     }
     &__card {
         display: block;
+        position: relative;
         background-color: #FFFFFF;
         border-radius: 11px;
         box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.4);
-        width: 90%;
+        width: 100%;
         min-width: 246px;
         margin: auto;
         margin-bottom: 30px;
         box-sizing: border-box;
+        &__new {
+            position: absolute;
+            background-color: #69e8d1;
+            color: #008b61;
+            width: 81px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 2px;
+            top: 13px;
+            font-size: 13px;
+            right: 13px;
+        }
         &__img {
             width: 100%;
             object-fit: cover;

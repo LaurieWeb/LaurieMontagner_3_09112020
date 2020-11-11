@@ -3,9 +3,21 @@
 }
 
 .fonctionnement {
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    &__title {
     margin-top: 45px;
     margin-left: 20px;
     margin-bottom: 28px;
+    @media screen and (min-width: 768px) {
+        text-align: center; 
+        margin-left: 0px;}
+    }
     &__card {
     display: flex;
     align-items: center;
@@ -16,11 +28,14 @@
     margin-bottom: 25px;
     box-shadow: 0px 2px 10px 0px #e4e6e6;
     background-color: #f5f7f7;
+    transition: all 250ms;
+    @media screen and (min-width: 768px) {
+        width: 25%;
+    }
         &__number {
             background-color: $color-primary;
             color: white;
-            height: 24px;
-            width: 24px;
+            padding: 1px 8px;
             border-radius: 100%;
             text-align: center;
             line-height: 24px;
@@ -28,11 +43,12 @@
         }
         &__icone {
             margin-left: 22px;
-            margin-right: 25px;
+            margin-right: 20px;
         }
         &__text {
             font-weight: bold;
             color: black!important;
+            margin: 5px;
         }
         &:hover {
             color: $color-primary!important;
