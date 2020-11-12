@@ -38,7 +38,7 @@
 }
 
 #dishes {
-    padding-top: 90px;    
+    padding-top: 50px;    
     background-color: #f5f7f7;
     padding-bottom: 90px;
 }
@@ -47,6 +47,7 @@
     &__title{
         font-weight: normal;
         margin-left: 20px;
+        margin-top: 40px;
         &::after {
             content: "";
             width: 40px;
@@ -67,12 +68,68 @@
             box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.4);
             box-sizing: border-box;
             padding: 15px 10px;
+            position: relative;
+            margin-bottom: 14px;
+            overflow: hidden;
+            &:hover .dishes__block__card__validation {
+                transform: translateX(0);   
+            }
+            &:hover .dishes__block__card__validation__check {
+                transform: rotate(1turn);
+            }
+            &:hover .dishes__block__card__price {
+                transform: translateX(-60px);        
+            }
+            &:hover .dishes__block__card__text {
+                width: 65%;         
+            }
+            &__text {
+                max-width: 85%; 
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                display: block;
+                overflow: hidden;
+                transition: all 500ms;
+            }
             &__title {
+                display: block;
                 margin: 0px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
             }
             &__description {
-                margin: 0px;
-                font-size: 15px;
+                margin: 0px; 
+                text-overflow: ellipsis;  
+                white-space: nowrap;
+                overflow: hidden;
+            }
+            &__price {
+                position: absolute;
+                right: 15px;
+                bottom: 5px;    
+                transform: translateX(0);               
+                transition: all 500ms;
+            }
+            &__validation {
+                height: 68px;
+                width: 60px;
+                background-color: $color-tertiary;
+                position: absolute;
+                right: 0px;
+                bottom: 0px;
+                border-bottom-right-radius: inherit;
+                border-top-right-radius: inherit;
+                transform: translateX(60px);   
+                transition: all 500ms;
+                text-align: center;
+                line-height: 68px;
+                &__check {
+                    color: white;
+                    font-size: 20px;
+                    transform: rotate(0turn);
+                    transition: all 500ms linear;
+                }
             }
         }
     }
