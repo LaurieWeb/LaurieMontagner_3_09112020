@@ -1,0 +1,75 @@
+.loader {
+    display: flex;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    animation: load 3s; 
+    position: absolute;
+    justify-content: center;
+    animation-fill-mode: both;
+    &__background {
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: fixed;
+        z-index: 2;
+        animation: load 3s;
+        animation-fill-mode: both;
+    }
+}
+
+.dot {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  background: #9356DC;
+  border-radius: 100%;
+  display: inline-block;
+  animation: zoom 1s infinite;
+  animation-fill-mode: both;
+  z-index: 4;
+}
+
+@for $i from 1 through 5 {
+    .dot:nth-child(#{$i}n) {
+        animation-delay: #{$i * 0.1}s;     
+    }
+ }
+
+.dot:nth-child(2) {
+  background-color: #FF79DA;
+}
+
+.dot:nth-child(3) {
+  background-color: #99E2D0;
+}
+
+.dot:nth-child(4) {
+  background-color: #FF79DA;
+}
+
+
+@keyframes zoom {
+  0% {
+    transform: scale(1); }
+  50% {
+    opacity: 0.3;
+    transform: scale(2); }
+  100% {
+    transform: scale(1); }
+}
+
+@keyframes load {
+    0% {
+      opacity: 1; }
+
+     85% {
+        opacity: 1;
+        z-index: 2; }
+
+    100% {
+      opacity: 0;
+      z-index: -1; }
+  }
