@@ -84,7 +84,8 @@ footer {
   background: #9356DC;
   border-radius: 100%;
   display: inline-block;
-  animation: zoom 1s infinite;
+  animation: zoom 1s;
+  animation-iteration-count: 4;
   animation-fill-mode: both;
   z-index: 4;
 }
