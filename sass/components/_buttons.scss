@@ -1,5 +1,5 @@
 .main__button {
-    display: auto;
+    display: block;
     width: fit-content;
     box-sizing: border-box;
     height: 50px;
@@ -14,3 +14,7 @@
         box-shadow: 0px 2px 10px 0px #6f7070;
     }
 }
+
+.commander {
+    margin: auto;
+    margin-top: 30px; }

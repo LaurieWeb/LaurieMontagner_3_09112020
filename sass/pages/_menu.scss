@@ -26,11 +26,16 @@
 .menu__title {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 90%;
     margin: auto;
+    @media screen and (min-width: 768px) {
+        justify-content: center;
+    }
     &__text {   
     font-family: 'Shrikhand';
+    margin-right: 15px;
+    margin-left: 15px;
     }
     &__heart {   
     background-color: #f5f7f7;
@@ -38,12 +43,37 @@
 }
 
 #dishes {
+    display: flex;
+    flex-direction: column;
     padding-top: 50px;    
     background-color: #f5f7f7;
-    padding-bottom: 90px;
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        justify-content: space-around;
+    }
 }
 
+@keyframes card {
+    0% {
+        transform: translateY(10px);
+        opacity: 0;
+  }
+      
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@for $i from 1 through 9 {
+    .dishes__block__card:nth-child(#{$i}n) {
+        animation-delay: #{$i * 0.25}s; }
+ }
+
 .dishes {
+    @media screen and (min-width: 768px) {
+        width: 30%;
+    }
     &__title{
         font-weight: normal;
         margin-left: 20px;
@@ -71,6 +101,8 @@
             position: relative;
             margin-bottom: 14px;
             overflow: hidden;
+            animation: card 1000ms;
+            animation-fill-mode: backwards;
             &:hover .dishes__block__card__validation {
                 transform: translateX(0);   
             }
@@ -133,5 +165,11 @@
             }
         }
     }
+}
+
+#order {
+    background-color: #f5f7f7;
+    padding-bottom: 50px;
+    padding-top: 10px;
 }
 

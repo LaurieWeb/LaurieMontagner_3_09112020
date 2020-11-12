@@ -34,7 +34,7 @@ footer {
   src: url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 }
 .main__button {
-  display: auto;
+  display: block;
   width: fit-content;
   box-sizing: border-box;
   height: 50px;
@@ -48,6 +48,11 @@ footer {
 .main__button:hover {
   background: linear-gradient(180deg, #ff88de 0%, #9b63df 100%);
   box-shadow: 0px 2px 10px 0px #6f7070;
+}
+
+.commander {
+  margin: auto;
+  margin-top: 30px;
 }
 
 #logo {
@@ -351,23 +356,88 @@ footer {
 .menu__title {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 90%;
   margin: auto;
 }
+@media screen and (min-width: 768px) {
+  .menu__title {
+    justify-content: center;
+  }
+}
 .menu__title__text {
   font-family: 'Shrikhand';
+  margin-right: 15px;
+  margin-left: 15px;
 }
 .menu__title__heart {
   background-color: #f5f7f7;
 }
 
 #dishes {
+  display: flex;
+  flex-direction: column;
   padding-top: 50px;
   background-color: #f5f7f7;
-  padding-bottom: 90px;
+}
+@media screen and (min-width: 768px) {
+  #dishes {
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
 
+@keyframes card {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.dishes__block__card:nth-child(1n) {
+  animation-delay: 0.25s;
+}
+
+.dishes__block__card:nth-child(2n) {
+  animation-delay: 0.5s;
+}
+
+.dishes__block__card:nth-child(3n) {
+  animation-delay: 0.75s;
+}
+
+.dishes__block__card:nth-child(4n) {
+  animation-delay: 1s;
+}
+
+.dishes__block__card:nth-child(5n) {
+  animation-delay: 1.25s;
+}
+
+.dishes__block__card:nth-child(6n) {
+  animation-delay: 1.5s;
+}
+
+.dishes__block__card:nth-child(7n) {
+  animation-delay: 1.75s;
+}
+
+.dishes__block__card:nth-child(8n) {
+  animation-delay: 2s;
+}
+
+.dishes__block__card:nth-child(9n) {
+  animation-delay: 2.25s;
+}
+
+@media screen and (min-width: 768px) {
+  .dishes {
+    width: 30%;
+  }
+}
 .dishes__title {
   font-weight: normal;
   margin-left: 20px;
@@ -394,6 +464,8 @@ footer {
   position: relative;
   margin-bottom: 14px;
   overflow: hidden;
+  animation: card 1000ms;
+  animation-fill-mode: backwards;
 }
 .dishes__block__card:hover .dishes__block__card__validation {
   transform: translateX(0);
@@ -454,6 +526,12 @@ footer {
   font-size: 20px;
   transform: rotate(0turn);
   transition: all 500ms linear;
+}
+
+#order {
+  background-color: #f5f7f7;
+  padding-bottom: 50px;
+  padding-top: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
