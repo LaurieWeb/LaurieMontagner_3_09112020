@@ -24,7 +24,7 @@
   position: relative;
   width: 24px;
   height: 24px;
-  background: #9356DC;
+  background: $color-primary;
   border-radius: 100%;
   display: inline-block;
   animation: zoom 1s;
@@ -40,15 +40,15 @@
  }
 
 .dot:nth-child(2) {
-  background-color: #FF79DA;
+  background-color: $color-secondary;
 }
 
 .dot:nth-child(3) {
-  background-color: #99E2D0;
+  background-color: $color-tertiary;
 }
 
 .dot:nth-child(4) {
-  background-color: #FF79DA;
+  background-color: $color-secondary;
 }
 
 
